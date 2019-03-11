@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <h1>Porsche</h1>
+        <nav>
+            <ol>
+                <li>
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                <li>
+
+                </li>
+                <li>             
+                    
+                </li>
+            </ol>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <p>Made by: Alhazur &copy; @DateTime.Now.ToString("yyyy")</p>
+    </footer>
+</body>
+</html>
