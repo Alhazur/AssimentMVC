@@ -1,0 +1,83 @@
+body{
+    max-width: 1024px;
+margin-left: auto;
+margin-right: auto;
+ background-image: url('https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcTwVgFbXVbB5DsNOZBfUumQ70a7qC3vyZLGequ65vIZeKOfpIzU2REMKEEB_W3gL5Gbjr4j3UgH_shfH7iQ57eJFZhPKbl.L2VhCwywqOA8s2xJZrBYbHOtX5JZPWWjDUeSLbDKxaodUpqfMzRC9Pg3W88OODQ4AaY9iASoNI99c-&h=1080&w=1920&format=jpg')  
+}
+header{
+  height: 50px;
+}/**/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1px;
+    padding: 10px;
+    width: 96%;
+    margin: auto;
+    
+  }
+  
+  .grid-container > div {
+    text-align: center;
+    padding: 1px;
+    font-size: 20px;
+    width: 96%;
+  }
+  .item1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+nav > ul > li{
+    float: left;
+    padding: 20px;
+    list-style-type: none;
+}
+a{
+    margin: 10px;    
+    font-size: 20px;
+}
+header > h1{
+    float: left;
+    padding-right: 20px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    padding-bottom: 0px;
+    margin: 10px;
+    
+}
+section {
+  width: 65%; 
+text-align: left;
+float: left;
+margin: 10px;
+}
+section > h2{
+    margin-left: 10px;
+}
+.clearfix::after, p, footer{
+    content: "";
+    clear: both;
+    display: table;
+    margin: 10px;
+}
+aside{
+  float: left;
+  top: 100%;
+  width: 25%;
+  padding-left: 10px;
+  margin: 10px;
+}
+ol > li{
+  text-align: start;
+  padding: 5px;
+}
+ul{
+  padding-right: 10px;
+}
+footer{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}

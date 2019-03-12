@@ -4,24 +4,49 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="~/Style.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <h1>Porsche</h1>
-        <nav>
-            <ol>
-                <li>
-                    @Html.ActionLink("Home", "Index", "Home")
-                </li>
-                <li>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
-                </li>
-                <li>             
-                    
-                </li>
-            </ol>
+            <a class="navbar-brand" href="#"> @Html.ActionLink("Home", "Index", "Home")</a>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Projects">Projects</a>
+                    </li>
+                </ul>
+
+            </div>
         </nav>
+
+            <div class="dropdown">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    Assignments
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                </div>
+            </div>
     </header>
+
+    
+
     <div>
         @RenderBody()
     </div>

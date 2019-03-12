@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+
+        <a class="navbar-brand" href="#"><img src="http://www.carlogos.org/logo/BMW-logo.png" alt="logo"
+                style="width:40px;"></a>
+
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.bmw.se/sv/index.html">BMW Sverige</a>
+            </li>
+            <li class=""><a class="nav-link"
+                    href="https://www.bmw.se/sv/alla-modeller/m/m5-sedan/2017/bmw-m5-oversikt.html#/bookmark=aHR0cHM6Ly93ZWJmb3JtLmJtdy5zZS9wcmlzZm9yc2xhZy8/bW9kZWw9Ym13bSZtZXNzYWdlPUhlaiElMEQlMEFKYWclMjAlQzMlQTRyJTIwaW50cmVzc2VyYWQlMjBhdiUyMGF0dCUyMGYlQzMlQTUlMjBldHQlMjBwcmlzZiVDMyVCNnJzbGFnJTIwb2NoJTIwdmV0YSUyMG1lciUyMG9tJTIwQk1XJTIwTTUlMjBTZWRhbi4lMjAlMEQlMEElMEQlMEFFdmVudHVlbGwlMjBhbm5hbiUyMHV0cnVzdG5pbmclMjBqYWclMjAlQzMlQTRyJTIwaW50cmVzc2VyYWQlMjBhdjolMjAlMEQlMEElMEQlMEFWJUMzJUE0bmxpZ2VuJTIwa29udGFrdGElMjBtaWclMjBzJUMzJUE1JTIwc25hcnQlMjBzb20lMjBtJUMzJUI2amxpZ3Qu">Bmw
+                    M5</a></li>
+            <li class=""><a class="nav-link"
+                    href="https://www.blocket.se/stockholm/Bmw_520_d_xdrive_m_sport_aut_190hk_leasbar_81946403.htm">Used
+                    car</a></li>
+        </ul>
+    </nav>
+
+    <div class="row">
+        <div class="col-4"><img src="http://hd.wallpaperswide.com/thumbs/bmw_21-t2.jpg" class="mx-auto d-block" alt="">
+        </div>
+        <div class="col-4"><img src="http://hd.wallpaperswide.com/thumbs/bmw_m3_3-t2.jpg" class="mx-auto d-block"
+                alt="">
+        </div>
+        <div class="col-4"><img src="http://hd.wallpaperswide.com/thumbs/bmw_m3_autumn-t2.jpg" class="mx-auto d-block"
+                alt=""></div>
+    </div>
+
+
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="http://img2.vetton.ru//upl/14000/13028/vetton_ru_351335dorogadorozhkatravazelensklongoryvechersoln-1920x1200.jpg"
+                    alt="Los Angeles">
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="http://img2.vetton.ru//upl/18000/17498/vetton_ru_steppe-and-forest-4608x3456.jpg"
+                    alt="Chicago">
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="http://img2.vetton.ru//upl/1000/4/vetton_ru_vzmvfmbafnjlbzarfrgmzmibinabivzhjfbhjfvadvgmzmzhimvgzheamgvvgbf-2-2560x1600.jpg"
+                    alt="New York">
+                <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    <div class="container" style="margin-top:30px">
+        <div class="row">
+            <div class="col-sm-3">
+
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <hr class="d-sm-none">
+            </div>
+            <div class="col-sm-9">
+                <h1>History Bmw 5 series</h1>
+                <p>It was at that time that the BMW 1500, the BMW 1800 and the BMW 2000 entered the market
+                    as the “New Range”,establishing the most successful model series BMW had ever seen up
+                    to that point. The competence in the
+                    development and production of saloons demonstrated by BMW with these models gave the
+                    Company a worldwide breakthrough as a manufacturer of modern and highly desirable
+                    automobiles with very individual characteristics.
+                    Switching from the New Range to the BMW 5 Series in 1972, BMW introduced not only new
+                    nomenclature, but also a new era in design.Indeed, the number “5” immediately became
+                    the synonym for unmistakable driving pleasure in this segment. Ever since, the BMW 5 Series
+                    has stood for sedans which, through their design, offer particularly harmonious balance
+                    of sportiness and elegance authentically reflecting a unique combination of driving dynamics
+                    and motoring comfort ensured by superior drivetrain and suspension technology. The BMW 5 Series
+                    therefore offers a particularly concentrated rendition of the outstanding competence in
+                    development of this leading
+                    car maker from Munich.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row p-3">
+        <div class="col-7">
+            <form class="form-group">
+
+                <div class="form-group">
+                    <label for="inputName">Your name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                </div>
+
+                <div class="form-group">
+                    <label for="InputTel">Telephone</label>
+                    <input type="tel" class="form-control" id="number" placeholder="Enter number">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="Textarea">Message</label>
+                    <textarea class="form-control" id="Textarea" rows="3"
+                        placeholder="Write your message her!"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+
+                <div class="form-group">
+                    <br>
+                    <input type="reset" class="form-control btn btn-danger" value="Reset">
+                </div>
+
+
+            </form>
+        </div>
+
+        <div class="col-5">
+
+            <div class="form-group col-5">
+                <img src="http://hd.wallpaperswide.com/thumbs/bmw_m5_concept_front-t2.jpg">
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+        <div class="container text-center text-md-left">
+
+            <div class="row">
+
+                <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+                    <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
+                    <p>Here you can use rows and columns here to organize your footer content.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident
+                        voluptate esse
+                        quasi, veritatis totam voluptas nostrum.</p>
+
+                </div>
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                    <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                <a href="#!">PROJECTS</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#!">ABOUT US</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#!">BLOG</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#!">AWARDS</a>
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                    <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                <i class="fas fa-home mr-3"></i> Stockholm, Storgatan 4</p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-phone mr-3"></i> + 46 73 234 567 88</p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-print mr-3"></i> + 46 73 233 567 89</p>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <hr class="clearfix w-100 d-md-none">
+
+
+            </div>
+
+        </div>
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="https://www.bmw.se/sv/ssl/configurator.html#/">Alhazur</a>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

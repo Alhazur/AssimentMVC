@@ -1,0 +1,14 @@
+﻿body {
+    background-image: url("http://img2.vetton.ru//upl/1000/2/vetton_ru_100d0d70f4a15100012450281-2152x1309.jpg");
+    padding: 10px;
+}
+ul > li > a{
+    margin-right: 15px;
+}
+header > nav > a {
+    font-size: 40px;
+    margin-right: 25px;
+}
+.container{
+    background-color: azure;
+}

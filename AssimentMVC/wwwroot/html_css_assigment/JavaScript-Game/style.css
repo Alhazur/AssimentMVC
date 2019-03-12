@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(168, 168, 168);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#container{
+    height: auto;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+#container > div{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+}
+
+.wall{
+    background-image: url('https://www.wallsauce.com/uploads/wallsauce-com/images/products/web/fotolia/large/35480392stacked-stone-wall-background-horizontal.jpg');
+}
+.space{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjk-D2fVSO8EJXn_s5vuHcf3kRRJmU6noOhen60QcVJTOWN8dMPA');    
+}
+.goal{
+    background-image: url('http://www.phoenixsportinggoods.com/media/1563/phoen-18-j1s1-fullproductv12-12.jpg?anchor=center&mode=crop&rnd=131661939890000000');    
+}
+.block{
+    background-image: url('https://cdn.shopify.com/s/files/1/1078/5970/products/Large_soap_stone_box_1024x1024.jpeg?v=1448886940');   
+}
+.goal.block{
+}
+.player{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzsIMURSSaibPuAYytIWOwcll9icNtyjK_wQMZ95sLvWtCJcYM');
+}

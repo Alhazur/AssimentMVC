@@ -13,6 +13,27 @@ namespace AssimentMVC.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+            return View(); 
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult Projects()
+        {
+            return View();
+        }
+
+        //Fever
+        public IActionResult Fever()
+        {
             return View();
         }
     }

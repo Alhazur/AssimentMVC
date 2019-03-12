@@ -28,7 +28,13 @@ namespace AssimentMVC
 
             app.UseStaticFiles();
 
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("FeverSpecial", "FeverCheck",
+                    defaults: new { controller = "Home", action = "Fever" });
+
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
