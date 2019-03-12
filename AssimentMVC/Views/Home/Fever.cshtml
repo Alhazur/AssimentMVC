@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Fever";
+}
+
+<h1>Fever</h1>
+
+<form asp-controller="Home" asp-action="Fever" method="post">
+    <input name="fah" type="number" min="0" max="270" placeholder="Angle" />
+    <input name="cel" type="number" min="0" max="270" placeholder="Angle" />
+
+    <button>Calculate</button>
+</form>
+
+@if (ViewBag.CelsiusToFahrenheit != null)
+{
+    <h3>Result</h3>
+    <p>@ViewBag.CelsiusToFahrenheit</p>
+}
