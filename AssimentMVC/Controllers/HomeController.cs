@@ -11,7 +11,7 @@ namespace AssimentMVC.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: /<controller>/
+
         public IActionResult Index()
         {
             return View();
@@ -31,27 +31,24 @@ namespace AssimentMVC.Controllers
         {
             return View();
         }
-
-        //Fever
+                
         public IActionResult Fever()
         {
             return View();
         }
 
-        public IActionResult Fever(string fah, string cel)
+        [HttpPost]
+        public IActionResult Fever(string temp)
         {
-            Temperature temp = new Temperature();
 
-            double numFah = 0;
-            double numCel = 0;
+            double numTemp = 0;
+            //string.IsNullOrEmpty(temp)
 
-            fah = fah.Replace(".", ",");
-            cel = cel.Replace(".", ",");
+            temp = temp.Replace(".", ",");
 
-            double.TryParse(fah, out numFah);
-            double.TryParse(cel, out numCel);
+            double.TryParse(temp, out numTemp);
 
-            ViewBag.CelsiusToFahrenheit = Temperature.CelsiusToFahrenheit(fah);
+            ViewBag.Result = Temperature.Celsius(numTemp);
 
             return View();
         }

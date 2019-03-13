@@ -3,17 +3,15 @@
     ViewData["Title"] = "Fever";
 }
 
-<h1>Fever</h1>
+<h1>Fever control</h1>
 
 <form asp-controller="Home" asp-action="Fever" method="post">
-    <input name="fah" type="number" min="0" max="270" placeholder="Angle" />
-    <input name="cel" type="number" min="0" max="270" placeholder="Angle" />
-
-    <button>Calculate</button>
+    <input type="number" name="temp" value="36" />
+    <input type="submit" name="temp" value="celsius"/>
 </form>
 
-@if (ViewBag.CelsiusToFahrenheit != null)
+@if (ViewBag.Result != null)
 {
     <h3>Result</h3>
-    <p>@ViewBag.CelsiusToFahrenheit</p>
+    <p>@ViewBag.Result</p>
 }

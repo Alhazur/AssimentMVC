@@ -7,18 +7,24 @@ namespace AssimentMVC.Models
 {
     public class Temperature
     {
-        public static double CelsiusToFahrenheit(string celsiusTepm)
+        
+        public static string Fahrenheit(double fahrenheit)
         {
-            double celsius = double.Parse(celsiusTepm);
-            double fahrenheit = (celsius * 9 / 5) + 32;
-            return fahrenheit;            
+            double celsius = (fahrenheit - 32) / 1.8;
+            return Celsius(celsius);
         }
 
-        public static double FahrenheitToCelsius(string fahrenheitTepm)
+        public static string Celsius(double celsius)
         {
-            double fahrenheit = double.Parse(fahrenheitTepm);
-            double celsius = (fahrenheit - 32) * 5 / 9;
-            return celsius;
+            if (celsius >= 38)
+            {
+                return "You have fever";
+            }
+            else
+            {
+                return "You have no fever";
+            }
+
         }
     }
 }
