@@ -40,13 +40,17 @@ namespace AssimentMVC.Controllers
         [HttpPost]
         public IActionResult Fever(string temp)
         {
-
             double numTemp = 0;
-            //string.IsNullOrEmpty(temp)
 
-            temp = temp.Replace(".", ",");
-
-            double.TryParse(temp, out numTemp);
+            if (String.IsNullOrEmpty(temp))
+            {
+                return View();
+            }
+            else
+            {
+                temp = temp.Replace(".", ",");
+                double.TryParse(temp, out numTemp);
+            }
 
             ViewBag.Result = Temperature.Celsius(numTemp);
 

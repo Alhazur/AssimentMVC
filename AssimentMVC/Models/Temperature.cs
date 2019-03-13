@@ -20,7 +20,7 @@ namespace AssimentMVC.Models
             {
                 return "You have fever";
             }
-            else
+            else 
             {
                 return "You have no fever";
             }
