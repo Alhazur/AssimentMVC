@@ -9,7 +9,7 @@ namespace AssimentMVC.Controllers
 {
     public class GuessController : Controller
     {
-        public const string SessionKeyName = "RandomNumer";
+        public const string SessionKeyName = "_Name";
         public const string SessionKeyAge = "_Age";
 
         [HttpGet]
@@ -26,10 +26,14 @@ namespace AssimentMVC.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(int geussNumber)
+        public IActionResult GuessingGame(string geussNumber)
         {
             var name = HttpContext.Session.GetString(SessionKeyName);
             var age = HttpContext.Session.GetInt32(SessionKeyAge);
+
+            ViewBag.Name = HttpContext.Session.GetString(SessionKeyName);
+            ViewBag.Age = HttpContext.Session.GetInt32(SessionKeyAge);
+            return View();
         }
     }
 }

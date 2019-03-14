@@ -15,6 +15,7 @@ namespace AssimentMVC
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
             services.AddSession();
             services.AddMvc();
             
@@ -36,6 +37,14 @@ namespace AssimentMVC
             {
                 routes.MapRoute("FeverSpecial", "FeverCheck",
                     defaults: new { controller = "Home", action = "Fever" });
+
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("GuessingGameSpecial", "GuessingGame",
+                    defaults: new { controller = "Home", action = "Index" });
 
                 routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
