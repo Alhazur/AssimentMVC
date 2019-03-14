@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AssimentMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -44,6 +45,7 @@ namespace AssimentMVC.Controllers
 
             if (String.IsNullOrEmpty(temp))
             {
+                ViewData["Message"] = "Please input value";
                 return View();
             }
             else
@@ -56,5 +58,7 @@ namespace AssimentMVC.Controllers
 
             return View();
         }
+
+
     }
 }
