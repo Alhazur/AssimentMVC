@@ -5,34 +5,42 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
+// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 namespace AssimentMVC.Controllers
 {
     public class GuessController : Controller
     {
-        public const string SessionKeyName = "_Name";
-        public const string SessionKeyAge = "_Age";
+        public int Id { get; set; }
 
-        [HttpGet]
         public IActionResult Index()
         {
+            Random rnd = new Random();
 
-            if (string.IsNullOrEmpty(HttpContext.Session.GetString(SessionKeyName)))
-            {
-                HttpContext.Session.SetString(SessionKeyName, "The Doctor");
-                HttpContext.Session.SetInt32(SessionKeyAge, 773);
-            }
+            int dice = rnd.Next(1, 100);
 
+            HttpContext.Session.SetInt32("rand", dice);
             return View();
         }
 
         [HttpPost]
-        public IActionResult GuessingGame(string geussNumber)
+        public IActionResult Index(int geussNumber)
         {
-            var name = HttpContext.Session.GetString(SessionKeyName);
-            var age = HttpContext.Session.GetInt32(SessionKeyAge);
 
-            ViewBag.Name = HttpContext.Session.GetString(SessionKeyName);
-            ViewBag.Age = HttpContext.Session.GetInt32(SessionKeyAge);
+            int? rand = HttpContext.Session.GetInt32("rand");
+            if (geussNumber < rand)
+            {
+                ViewData["Message"] = "too low";
+            }
+            else if (geussNumber > rand)
+            {
+                ViewData["Message"] = "too high";
+            }
+            else
+            {
+                ViewData["Message"] = "Congratulations you guessed right number";
+
+            }
             return View();
         }
     }

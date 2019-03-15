@@ -38,16 +38,13 @@ namespace AssimentMVC
                 routes.MapRoute("FeverSpecial", "FeverCheck",
                     defaults: new { controller = "Home", action = "Fever" });
 
-                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
-            });
-
-            app.UseMvc(routes =>
-            {
                 routes.MapRoute("GuessingGameSpecial", "GuessingGame",
-                    defaults: new { controller = "Home", action = "Index" });
+                    defaults: new { controller = "Guess", action = "Index" });
 
                 routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
+
+            
         }
     }
 }
