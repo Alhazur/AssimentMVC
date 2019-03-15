@@ -11,8 +11,6 @@ namespace AssimentMVC.Controllers
 {
     public class GuessController : Controller
     {
-        public int Id { get; set; }
-
         public IActionResult Index()
         {
             Random rnd = new Random();
@@ -26,20 +24,18 @@ namespace AssimentMVC.Controllers
         [HttpPost]
         public IActionResult Index(int geussNumber)
         {
-
             int? rand = HttpContext.Session.GetInt32("rand");
             if (geussNumber < rand)
             {
-                ViewData["Message"] = "too low";
+                ViewData["Message"] = "You are too low";
             }
             else if (geussNumber > rand)
             {
-                ViewData["Message"] = "too high";
+                ViewData["Message"] = "You are too high";
             }
             else
             {
                 ViewData["Message"] = "Congratulations you guessed right number";
-
             }
             return View();
         }
